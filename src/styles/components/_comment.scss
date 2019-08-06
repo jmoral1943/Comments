@@ -1,0 +1,21 @@
+.Comment {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 1em;
+  margin-right: 1em;
+}
+
+.Comment__thumbs-up {
+  margin-right: 1em;
+}
+
+.Comment__buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.Comment__deleteButton {
+  margin-top: 1em;
+}
