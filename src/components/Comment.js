@@ -63,18 +63,16 @@ class Comment extends React.Component {
   handleCommentExpands = async() => {
     let newStatus = this.state.commented;
     newStatus = !newStatus
-    console.log(newStatus);
 
     await this.setState({
       commented: newStatus
     })
 
-    console.log(this.state.commented);
-    if (this.state.commented) {
-      document.querySelector(".InnerCommentBox").style.opacity = 1;
-    } else {
-      document.querySelector(".InnerCommentBox").style.opacity = 0;
-    }
+    // if (this.state.commented) {
+    //   document.querySelector(".InnerCommentBox").style.opacity = 1;
+    // } else {
+    //   document.querySelector(".InnerCommentBox").style.opacity = 0;
+    // }
   }
 
   render() {
@@ -103,11 +101,13 @@ class Comment extends React.Component {
         </div>
         <div>
           <button className="Comment__addComments" type="button" onClick={this.handleCommentExpands}>Add comment</button>
+          {this.state.commented ?
+            <InnerCommentBox 
+              post={this.handleCommentedOn}
+            />
+          : null
+          }
   
-          <InnerCommentBox 
-            post={this.handleCommentedOn}
-          />
-           
           {this.state.commentCompleted ?
             this.state.comments.map((comment)=> {
               return (

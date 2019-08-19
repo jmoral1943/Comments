@@ -23,7 +23,7 @@ class InnerComment extends React.Component {
   render() {
     return(
       <div className="InnerComment">
-        <div>
+        <div className="Comment__content">
           <h3>{this.props.userName}</h3>
           <p>{this.props.comment}</p>
         </div>

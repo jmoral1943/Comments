@@ -14,6 +14,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  width: 10vw;
 }
 
 .Comment__deleteButton {
@@ -23,4 +24,5 @@
 .Comment__content {
   width: 80vw;
   word-wrap: break-word;
+  margin-right: 2em;
 }
